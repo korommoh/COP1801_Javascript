@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bamer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* The grid: four equal columns that floats next to each other */
+      .column {
+        float: left;
+        width:22.0%;
+        padding: 50px;
+        text-align: center;
+        font-size: 17px;
+        cursor: pointer;
+        color: white;
+      }
+
+      .containerTab {
+        padding: 20px;
+        color: white;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Closable button inside the container tab */
+      .closebtn {
+        float: right;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div style="text-align:center">
+      <h2>Bamer</h2>
+      <p>There is always way to make life better, enjoy it now</p>
+    </div>
+
+    <!-- four columns -->
+    <div class="row">
+      <div class="column" onclick="openTab('b1');" style="background:green;">
+        Home
+      </div>
+      <div class="column" onclick="openTab('b2');" style="background:blue;">
+        Aboutus
+      </div>
+      <div class="column" onclick="openTab('b3');" style="background:red;">
+        Portfolio
+      </div>
+      <div class="row">
+        <div class="column" onclick="openTab('b4');" style="background:gold;">
+          Purchase
+        </div>
+
+        <!-- Full-width columns: (hidden by default) -->
+        <div id="b1" class="containerTab" style="display:none;background:green">
+          <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+          <h2>Home</h2>
+          <p>In the life of many, people have make a difference in other people and created change in the lives of other</p>
+        </div>
+
+        <div id="b2" class="containerTab" style="display:none;background:blue">
+          <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+          <h2>Aboutus</h2>
+          <p>My company will bring positve change in Agriculture that will give more farmers grows there own crops.We are located in the heart of Africa, where farmers need help. Please contact us: 01177992785 or 099776827</p>
+        </div>
+        <div id="b3" class="containerTab" style="display:none;background:red">
+          <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+          <h3>Portfolio</h3>
+          <p>Connect with us on the web www.kky.com and receive free information and sample tools for your project.</p>
+        </div>
+        <div id="b4" class="containerTab" style="display:none;background:gold">
+          <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+          <h4>Purchase</h4>
+          <p>The farming industry will make sales available to each and every member of the community and create a micro-fund for all farmer.</p>
+          <script>
+            
+            function openTab(tabName) {
+              var i, x;
+              x = document.getElementsByClassName("containerTab");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              document.getElementById(tabName).style.display = "block";
+            }
+          </script>
+        </div>
+        <nav>
+        <p> The information above will give us more insite about how we should make our website more accessable</p>
+        </nav>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+        </div>
+        <div class="form-group">
+          <label for="uname">Username</label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+          </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="remember"> Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        
+          </div>
+    </div>
+  </body>
+  </html>
+
+      
